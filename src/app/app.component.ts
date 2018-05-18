@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
 
   constructor(private domSanitizer : DomSanitizer,
           private cd : ChangeDetectorRef){
-            cd.
+            
     this.dangerUrl = "javascript:alert('Hello There!!!')";
     this.trustedUrl = this.domSanitizer.bypassSecurityTrustUrl(this.dangerUrl);
   }
