@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
+import { GlobalErrorHandle } from './Global-erro-handler-service';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [{
+    provide : ErrorHandler, useClass : GlobalErrorHandle
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

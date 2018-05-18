@@ -4,6 +4,15 @@
     Welcome to {{ title }}!
   </h1>
 
+  Some Model :: {{someModel}}
+
+  <a [href]="dangerUrl">Danger URL </a> <br>
+  <a [href]="trustedUrl">Trusted URL </a>
+
+
+  <p [innerHTML]="someModel"></p>
+
+<button (click)="myError()">Generate Error</button>
   <div class="container">
     <table class="table table-condensed table-striped table-responsive">
       <thead>
